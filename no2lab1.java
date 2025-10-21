@@ -7,27 +7,31 @@ public class no2lab1 {
         PrintWriter pw = new PrintWriter(System.out);
 
         //StringTokenizer st = new StringTokenizer(br.readLine());
-        String cal=br.readLine();
-        String[] part= cal.split(" ");
-        int a = Integer.parseInt(part[1]);
-        int b = Integer.parseInt(part[part.length-1]);
-        String symbol = part[2];
+        int t=Integer.parseInt(br.readLine());
+        
+        for (int i = 0; i < t; i++) {
+            String cal=br.readLine();
+            String[] part= cal.split(" ");
+            int a = Integer.parseInt(part[1]);
+            int b = Integer.parseInt(part[part.length-1]);
+            String symbol = part[2];
 
-        if (symbol.equals("+")){
-            double x = (double) a + b;
-            pw.println(x);
-        }
-        else if (symbol.equals("-")){
-            double x = (double) a - b;
-            pw.println(x);
-        }
-        else if (symbol.equals("*")){
-            double x = (double) a * b;
-            pw.println(x);
-        }
-        else if (symbol.equals("/")){
-            double x = (double) a / b;
-            pw.println(x);
+            if (symbol.equals("+")){
+                double x = (double) a + b;
+                pw.println(x);
+            }
+            else if (symbol.equals("-")){
+                double x = (double) a - b;
+                pw.println(x);
+            }
+            else if (symbol.equals("*")){
+                double x = (double) a * b;
+                pw.println(x);
+            }
+            else if (symbol.equals("/")){
+                double x = (double) a / b;
+                pw.println(x);
+            } 
         }
         pw.close();
     }
