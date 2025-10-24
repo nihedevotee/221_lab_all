@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 
-public class no1lab1 {
+public class no1Alab1 {
     public static void main(String[] args) throws IOException {
         //Scanner sc = new Scanner(System.in);
         BufferedReader br= new BufferedReader(new InputStreamReader(System.in));

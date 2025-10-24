@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
 
-public class no5lab1 {
+public class no5Elab1VHUL {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         PrintWriter pw = new PrintWriter(System.out, true); 
@@ -23,22 +23,21 @@ public class no5lab1 {
         if (n==1){pw.println("YES"); pw.println(0);}
         
         else if (n==2){
-            int x=Integer.parseInt(br.readLine());
-            int y=Integer.parseInt(br.readLine());
+            int x=Integer.parseInt(st.nextToken());
+            int y=Integer.parseInt(st.nextToken());
             if (x<=y) {
                 pw.println("YES"); pw.println(0);
             }
             else {
-                pw.println("No");
+                pw.println("NO");
             }
         }
         else{
             for (int i = 0; i < arr.length; i++) {
-                int x= Integer.parseInt(st.nextToken());
-                arr[i]=x;
+                arr[i]= Integer.parseInt(st.nextToken());
             }
             for (int i = 1; i < arr.length-1; i++) {
-                int t=arr[i];
+                //int t=arr[i];
                 if (arr[i-1]==arr[i+1]){
                     pw.println("NO");
                     flag=true;
@@ -52,13 +51,13 @@ public class no5lab1 {
                     store.add(i+" "+(i+2)); 
                 }
             }
-            for (int i = 1; i < arr.length; i++) {
-                if(arr[i]<arr[i-1]){
-                    pw.println("NO");
-                    flag=true;
-                    break;
-                }
-            }
+            // for (int i = 1; i < arr.length; i++) {
+            //     if(arr[i]<arr[i-1]){
+            //         pw.println("NO");
+            //         flag=true;
+            //         break;
+            //     }
+            // }
             if(flag==false){
                 pw.println("YES");
                 pw.println(count);
@@ -69,5 +68,4 @@ public class no5lab1 {
             }
         }
     }
-
 }
